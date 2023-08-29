@@ -33,11 +33,15 @@ Funcion   alta ( reservados Por Referencia, horarioAReservar Por Referencia, dia
 	Fin Si
 Fin Funcion
 
+Funcion baja (reservados Por Referencia, horarioBaja Por Referencia, diaBaja Por Referencia)
+	//recorrer la matriz y cuando sea igual cambiar el estado de la reserva
+FinFuncion
+
 Funcion   mostrarDisponibilidad ( dias Por Referencia,horarios Por Referencia, reservados Por Referencia )
 	Para i<-1 Hasta 7 Con Paso 1 Hacer
 		Escribir "DIA: ",dias(i)
 		Para j<-1 Hasta 12 Con Paso 1 Hacer
-			Escribir "horarios: ",horarios(j)," reservado: ", reservados(j)
+			Escribir "horarios: ",horarios(j)," a ",horarios(j)+1," reservado: ", reservados(j)
 		Fin Para
 	Fin Para
 	
@@ -52,11 +56,12 @@ Funcion eleccion <- menu
 	Escribir"-                   MENU DE OPCIONES                    -"
 	Escribir"---------------------------------------------------------"                                                       
 	Escribir"- 1. Dar de alta una reserva                            -"
-	Escribir"- 2. Ver métodos de pago                                -"
-	Escribir"- 3. Ver descuentos                                     -"
-	Escribir"- 4. Ver disponibilidad horaria de la semana            -"
-	Escribir"- 5. Reservar un aperitivo en nuestro buffet            -"
-	Escribir"- 6. Ver layout de nuestras canchas                     -"
+	Escribir"- 2. Dar de baja una reserva                            -"
+	Escribir"- 3. Ver métodos de pago                                -"
+	Escribir"- 4. Ver descuentos                                     -"
+	Escribir"- 5. Ver disponibilidad horaria de la semana            -"
+	Escribir"- 6. Reservar un aperitivo en nuestro buffet            -"
+	Escribir"- 7. Ver layout de nuestras canchas                     -"
 	Escribir"- 0. Salir del sistema                                  -"
 	Escribir"---------------------------------------------------------"
 	leer eleccion
@@ -64,8 +69,8 @@ Fin Funcion
 
 Algoritmo proyectoLab
 	
-	Definir eleccion, horarioAReservar Como Entero
-	Definir diaAReservar Como Caracter
+	Definir eleccion, horarioAReservar, horarioBaja Como Entero
+	Definir diaAReservar, diaBaja Como Caracter
 	//Dimension matriz[7,12,12]            //preguntar como cargar una matriz
 	Dimension dias(7)
 	Dimension horarios(12)
@@ -90,16 +95,22 @@ Algoritmo proyectoLab
 					alta(reservados, horarioAReservar, diaAReservar)
 				Fin Si
 			2:
-				
+				Escribir "Ingrese el dia que quiere dar de baja"
+				leer diaBaja
+				Escribir"Ingrese el horario que previamente reservó"
+				leer horarioBaja
+				baja(reservados, horarioBaja, diaBaja)
 			3:
-				mostrarDescuentos()
+				
 				
 			4: 
-				mostrarDisponibilidad(dias,horarios,reservados)
+				mostrarDescuentos()
 			5:
+				mostrarDisponibilidad(dias,horarios,reservados)
 			6: 
-				MostrarLayout
+				
 			7:
+				MostrarLayout
 			De Otro Modo:
 				Escribir"Opcion mal ingresada"
 		Fin Segun
