@@ -1,47 +1,70 @@
 
-Funcion  cargarHorarios(horarios Por Referencia)
-	Definir cant Como Entero
-	cant <-12
-	Para i<-1 Hasta 12 Con Paso 1 Hacer
-		horarios(i)<-cant
-		cant<-cant +1
+Funcion cargarMatriz( matriz Por Referencia )
+	Para i<-1 Hasta 7 Con Paso 1 Hacer
+		Para j<-1 Hasta 12 Con Paso 1 Hacer
+			Para k<-1 Hasta 1 Con Paso 1 Hacer
+				matriz[i,j,k]<-0
+			Fin Para
+		Fin Para
+		
 	Fin Para
+	
 Fin Funcion
 
-Funcion cargarDias(dias Por Referencia)
-	dias(1)<-"Lunes"
-	dias(2)<-"Martes"
-	dias(3)<-"Miercoles"
-	dias(4)<-"Jueves"
-	dias(5)<-"Viernes"
-	dias(6)<-"Sabado"
-	dias(7)<-"Domingo"
-Fin Funcion
-
-Funcion cargarReservados(reservados Por Referencia)
-	Para i<-1 Hasta 12 Con Paso 1 Hacer
-		reservados(i)<-Falso
-	FinPara
-FinFuncion
-
-Funcion   alta ( reservados Por Referencia, horarioAReservar Por Referencia, diaAReservar Por Referencia)
-	Si  reservados(horarioAReservar-11) = Falso Entonces
-		reservados(horarioAReservar-11)<-Verdadero
+Funcion   alta ( matriz Por Referencia, horarioAReservar Por Referencia, diaAReservar Por Referencia)
+	Si  matriz[diaAReservar,horarioAReservar-11,1] = 0 Entonces
 		Escribir"Su reserva se efectuo correctamente"
+		matriz[diaAReservar,horarioAReservar-11,1]<-1
 	SiNo
 		Escribir"Ese horario ya esta reservado"
 	Fin Si
 Fin Funcion
 
-Funcion baja (reservados Por Referencia, horarioBaja Por Referencia, diaBaja Por Referencia)
-	//recorrer la matriz y cuando sea igual cambiar el estado de la reserva
+Funcion baja (matriz Por Referencia, horarioBaja Por Referencia, diaBaja Por Referencia)
+	Si matriz[diaBaja,horarioBaja-11,1]=1 Entonces
+		matriz[diaBaja,horarioBaja-11,1]<-0
+		Escribir"Se dio de baja su reserva correctamente"
+	SiNo
+		Escribir"Ese horario no esta reservado"
+	Fin Si
 FinFuncion
 
-Funcion   mostrarDisponibilidad ( dias Por Referencia,horarios Por Referencia, reservados Por Referencia )
+Funcion   mostrarDisponibilidad (matriz Por Referencia )
 	Para i<-1 Hasta 7 Con Paso 1 Hacer
-		Escribir "DIA: ",dias(i)
+		Si i=1 Entonces
+			Escribir "          Lunes "
+		SiNo
+			Si i=2 Entonces
+				Escribir "          Martes "
+			SiNo
+				Si i=3 Entonces
+					Escribir "          Miercoles "
+				SiNo
+					Si i=4 Entonces
+						Escribir "          Jueves "
+					SiNo
+						Si i=5 Entonces
+							Escribir "          Viernes "
+						SiNo
+							Si i=6 Entonces
+								Escribir "          Sabado "
+							SiNo
+								Escribir "          Domingo "
+							Fin Si
+						Fin Si
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
 		Para j<-1 Hasta 12 Con Paso 1 Hacer
-			Escribir "horarios: ",horarios(j)," a ",horarios(j)+1," reservado: ", reservados(j)
+			Escribir "  Horario: ",j+11," a ", j+12, " " Sin Saltar
+			Para k<-1 Hasta 1 Con Paso 1 Hacer
+				Si matriz[i,j,k]=1 Entonces
+					Escribir"Estado: RESERVADO  "
+				SiNo
+					Escribir"Estado: DESOCUPADO "
+				Fin Si
+			Fin Para
 		Fin Para
 	Fin Para
 	
@@ -69,54 +92,65 @@ Fin Funcion
 
 Algoritmo proyectoLab
 	
-	Definir eleccion, horarioAReservar, horarioBaja Como Entero
-	Definir diaAReservar, diaBaja Como Caracter
-	//Dimension matriz[7,12,12]            //preguntar como cargar una matriz
-	Dimension dias(7)
-	Dimension horarios(12)
-	Dimension reservados(12)
+	Definir eleccion, horarioAReservar, horarioBaja,diaAReservar,diaBaja Como Entero
 	
-	cargarDias(dias)
-	cargarHorarios(horarios)
-	cargarReservados(reservados)
-//	cargarMatriz(matriz)
+	Dimension matriz[7,12,12]         
+
+	cargarMatriz(matriz)
 	
 	eleccion<-menu()
 	Repetir
-		Segun eleccion Hacer
-			1: 
-				Escribir "Ingrese el dia que quiere reservar"
-				leer diaAReservar
-				Escribir "Ingrese el horario que quiere reservar (de 12 a 23)"
-				leer horarioAReservar
-				Si horarioAReservar<12 o horarioAReservar>23 Entonces
-					Escribir"Error al ingresar el horario"
-				SiNo
-					alta(reservados, horarioAReservar, diaAReservar)
-				Fin Si
-			2:
-				Escribir "Ingrese el dia que quiere dar de baja"
-				leer diaBaja
-				Escribir"Ingrese el horario que previamente reservó"
-				leer horarioBaja
-				baja(reservados, horarioBaja, diaBaja)
-			3:
-				
-				
-			4: 
-				mostrarDescuentos()
-			5:
-				mostrarDisponibilidad(dias,horarios,reservados)
-			6: 
-				
-			7:
-				MostrarLayout
-			De Otro Modo:
-				Escribir"Opcion mal ingresada"
-		Fin Segun
-		eleccion<-menu()
-	Hasta Que eleccion=0
-
+	Segun eleccion Hacer
+1: 
+	Escribir "Ingrese el dia que quiere reservar (1) Lunes (2) Martes (3) Miercoles"
+	Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
+	leer diaAReservar
+	Si diaAReservar <1 o diaAReservar>7 Entonces
+		Escribir "Ingreso el dia incorrectamente"
+	SiNo
+		Escribir "Ingrese el horario que quiere reservar (de 12 a 23)"
+		leer horarioAReservar
+		Si horarioAReservar<12 o horarioAReservar>23 Entonces
+			Escribir"Error al ingresar el horario"
+		SiNo
+			alta(matriz, horarioAReservar, diaAReservar)
+		Fin Si
+	Fin Si
+	
+2:
+	Escribir "Ingrese el dia que quiere dar de baja(1) Lunes (2) Martes (3) Miercoles "
+	Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
+	leer diaBaja
+	Si diaBaja<1 o diaBaja>7 Entonces
+		Escribir"Error al ingresar el dia"
+	SiNo
+		Escribir"Ingrese el horario que previamente reservó (de 12 a 23)"
+		leer horarioBaja
+		Si horarioBaja<12 o horarioBaja>23 Entonces
+			Escribir"Error al ingresar el horario"
+		SiNo
+			baja(matriz, horarioBaja, diaBaja)
+		Fin Si
+	Fin Si
+	
+	
+3:
+	
+	
+4: 
+	mostrarDescuentos()
+5:
+	mostrarDisponibilidad(matriz)
+6: 
+	
+7:
+	MostrarLayout
+De Otro Modo:
+	Escribir"Opcion mal ingresada"
+Fin Segun
+	eleccion<-menu()
+Hasta Que eleccion=0
+	
 FinAlgoritmo
 
 Funcion MostrarLayout
@@ -154,18 +188,3 @@ Funcion MostrarLayout
 	Escribir"----------------------------------------------------------------------------------------------------------"
 	
 FinFuncion
-
-
-//Funcion cargarMatriz( matriz Por Referencia )
-//
-//	matriz[1][1][1]<-"Lunes"
-//	matriz[2][1][1]<-"Martes"
-//	matriz[3][1][1]<-"Miercoles"
-//	matriz[4][1][1]<-"Jueves"
-//	matriz[5][1][1]<-"Viernes"
-//	matriz[6][1][1]<-"Sabado"
-//	matriz[7][1][1]<-"Domingo"
-//	
-//	
-//Fin Funcion
-	
