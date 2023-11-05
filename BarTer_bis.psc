@@ -177,7 +177,7 @@ Algoritmo BarTer
 				FinSi
 				
 				si opc1=2 Entonces
-					            Escribir "***************"
+					                        Escribir "***************"
 								Escribir "***SANDWICHS***"
 								Escribir "***************"
 								Escribir " "
