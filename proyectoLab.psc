@@ -599,7 +599,7 @@ Algoritmo proyectoLab
 					Escribir "-------------------------------------------------------------------"
 					Escribir "Tarjetas de Crédito de todos los bancos"
 					Escribir "-------------------------------------------------------------------"
-					Escribir "***********************IMPORTANTE**********************************"
+					Escribir "********************---IMPORTANTE---*******************************"
 					Escribir "-------------------------------------------------------------------"
 					Escribir "El Buffet solo  acepta pagos con tarjetas de Debito y/o Crédito"
 					Escribir "--------------------------------------------------------------------"
