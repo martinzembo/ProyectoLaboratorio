@@ -1,3 +1,74 @@
+Funcion contador<-registrar 
+	Definir usuario,usuarioRep,contra,contraRep Como Caracter
+	Definir contador Como Entero
+	
+	Escribir "Para registrarse por primera vez debe ingresar un nombre de usuario: "
+	leer usuario
+	Limpiar Pantalla
+	Escribir "Repita el mismo nombre de usuario (respetando mayúsculas y minusculas): "
+	leer usuarioRep
+	
+	si usuarioRep <> usuario Entonces
+		Repetir
+			Escribir "Usuario ingresado incorrectamente, porfavor escriba devuelta su usuario"
+			leer usuarioRep
+		Hasta Que usuario = usuarioRep
+	FinSi
+	Limpiar Pantalla
+	Escribir "Usuario registrado correctamente"
+	Escribir "Su usuario es: ",usuario
+	
+	Escribir "Ingrese una contraseña:"
+	leer contra
+	Limpiar Pantalla
+	Escribir "Repita la misma contraseña (respetando mayúsculas y minusculas):"
+	leer contraRep
+	
+	si contraRep <> contra Entonces
+		Repetir
+			Escribir "Contraseña ingresada incorrectamente, porfavor escriba devuelta su contraseña"
+			leer contraRep
+		Hasta Que contra = contraRep
+	FinSi
+	Limpiar Pantalla
+	Escribir "Contraseña registrada correctamente"
+	Escribir "Su contraseña es: ",contra
+	
+	Escribir "Una vez registrado su usario y contraseña debera ingresar sesion"
+	Escribir "Ingrese su usario (5 intentos)"
+	leer usuarioRep
+	
+	Si usuarioRep <> usuario Entonces
+		Repetir
+			Escribir "Usuario ingresado incorrectamente, porfavor escriba devuelta su usuario, le quedan: ",4-contador," intentos"
+			leer usuarioRep
+			contador<-contador+1
+		Hasta Que usuario = usuarioRep o contador=4
+	FinSi
+	
+	Si usuario <> usuarioRep Entonces
+		Escribir "Ha llegado al limite de intentos"
+	SiNo
+		Limpiar Pantalla
+		Escribir "Usuario ingresado correctamente"
+		Escribir "Ingrese su contraseña (5 intentos)"
+		leer contraRep
+		contador<-0
+		Si contraRep <> contra Entonces
+			Repetir
+				Escribir "Contraseña ingresada incorrectamente, porfavor escriba devuelta su contraseña, le quedan: ",4-contador," intentos"
+				leer contraRep
+				contador<- contador +1
+			Hasta Que contra = contraRep o contador = 4
+		FinSi
+		Si contra <> contraRep Entonces
+			Escribir "Ha llegado al limite de intentos"
+		SiNo
+			Escribir "Ha iniciado sesion correctamente"
+			contador<-0
+		FinSi
+	FinSi
+FinFuncion
 
 Funcion cargarMatriz( matriz Por Referencia )
 	Para i<-1 Hasta 7 Con Paso 1 Hacer
@@ -92,65 +163,70 @@ Fin Funcion
 
 Algoritmo proyectoLab
 	
-	Definir eleccion, horarioAReservar, horarioBaja,diaAReservar,diaBaja Como Entero
+	Definir eleccion, horarioAReservar, horarioBaja,diaAReservar,diaBaja,cont Como Entero
 	
-	Dimension matriz[7,12,12]         
-	
-	cargarMatriz(matriz)
-	
-	eleccion<-menu()
-	Mientras eleccion<>0 Hacer
-		Segun eleccion Hacer
-			1: 
-				Escribir "Ingrese el dia que quiere reservar (1) Lunes (2) Martes (3) Miercoles"
-				Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
-				leer diaAReservar
-				Si diaAReservar <1 o diaAReservar>7 Entonces
-					Escribir "Ingreso el dia incorrectamente"
-				SiNo
-					Escribir "Ingrese el horario que quiere reservar (de 12 a 23)"
-					leer horarioAReservar
-					Si horarioAReservar<12 o horarioAReservar>23 Entonces
-						Escribir"Error al ingresar el horario"
-					SiNo
-						alta(matriz, horarioAReservar, diaAReservar)
-					Fin Si
-				Fin Si
-				
-			2:
-				Escribir "Ingrese el dia que quiere dar de baja(1) Lunes (2) Martes (3) Miercoles "
-				Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
-				leer diaBaja
-				Si diaBaja<1 o diaBaja>7 Entonces
-					Escribir"Error al ingresar el dia"
-				SiNo
-					Escribir"Ingrese el horario que previamente reservó (de 12 a 23)"
-					leer horarioBaja
-					Si horarioBaja<12 o horarioBaja>23 Entonces
-						Escribir"Error al ingresar el horario"
-					SiNo
-						baja(matriz, horarioBaja, diaBaja)
-					Fin Si
-				Fin Si
-				
-				
-			3:
-				
-				
-			4: 
-				mostrarDescuentos()
-			5:
-				mostrarDisponibilidad(matriz)
-			6: 
-				Bar()
-			7:
-				MostrarLayout
-			De Otro Modo:
-				Escribir"Opcion mal ingresada"
-		Fin Segun
+	cont<-registrar()
+	Si cont = 4 Entonces
+		Escribir "Fin del programa"
+	SiNo
+		Dimension matriz[7,12,12]         
+		
+		cargarMatriz(matriz)
+		
 		eleccion<-menu()
-	Fin Mientras
-	Escribir "Programa finalizado con exito"
+		Mientras eleccion<>0 Hacer
+			Segun eleccion Hacer
+				1: 
+					Escribir "Ingrese el dia que quiere reservar (1) Lunes (2) Martes (3) Miercoles"
+					Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
+					leer diaAReservar
+					Si diaAReservar <1 o diaAReservar>7 Entonces
+						Escribir "Ingreso el dia incorrectamente"
+					SiNo
+						Escribir "Ingrese el horario que quiere reservar (de 12 a 23)"
+						leer horarioAReservar
+						Si horarioAReservar<12 o horarioAReservar>23 Entonces
+							Escribir"Error al ingresar el horario"
+						SiNo
+							alta(matriz, horarioAReservar, diaAReservar)
+						Fin Si
+					Fin Si
+					
+				2:
+					Escribir "Ingrese el dia que quiere dar de baja(1) Lunes (2) Martes (3) Miercoles "
+					Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
+					leer diaBaja
+					Si diaBaja<1 o diaBaja>7 Entonces
+						Escribir"Error al ingresar el dia"
+					SiNo
+						Escribir"Ingrese el horario que previamente reservó (de 12 a 23)"
+						leer horarioBaja
+						Si horarioBaja<12 o horarioBaja>23 Entonces
+							Escribir"Error al ingresar el horario"
+						SiNo
+							baja(matriz, horarioBaja, diaBaja)
+						Fin Si
+					Fin Si
+					
+					
+				3:
+					
+					
+				4: 
+					mostrarDescuentos()
+				5:
+					mostrarDisponibilidad(matriz)
+				6: 
+					Bar()
+				7:
+					MostrarLayout
+				De Otro Modo:
+					Escribir"Opcion mal ingresada"
+			Fin Segun
+			eleccion<-menu()
+		Fin Mientras
+		Escribir "Programa finalizado con exito"
+	FinSi
 	
 FinAlgoritmo
 
