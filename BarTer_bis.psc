@@ -296,7 +296,7 @@ Algoritmo BarTer
 					Escribir "       ", usuario
 					Escribir "Cantidad de productos:  ", v
 					Escribir "Total a pagar: $  ", total
-				    Escribir " "
+				        Escribir " "
 					Escribir "Seleccionar forma de pago."
 					Escribir "    1.- Debito"
 					Escribir "    2.- Crédito"
@@ -318,6 +318,7 @@ Algoritmo BarTer
 					pago_final <- total+recargo-descuento
 					Escribir " "
 					Escribir "Nombre de usuario: ", usuario
+                                        Escribir "Subtotal: $ ", total
 					Escribir "Su descuento es: $ ", descuento
 					Escribir "Su recargo es: $ ", recargo
 					Escribir "TOTAL a pagar: $ ", pago_final
