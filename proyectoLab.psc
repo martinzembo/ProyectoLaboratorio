@@ -5,7 +5,7 @@ Funcion contador<-registrar
 	Escribir "Para registrarse por primera vez debe ingresar un nombre de usuario: "
 	leer usuario
 	Limpiar Pantalla
-	Escribir "Repita el mismo nombre de usuario (respetando may√∫sculas y minusculas): "
+	Escribir "Repita el mismo nombre de usuario (respetando may˙sculas y minusculas): "
 	leer usuarioRep
 	
 	si usuarioRep <> usuario Entonces
@@ -18,23 +18,23 @@ Funcion contador<-registrar
 	Escribir "Usuario registrado correctamente"
 	Escribir "Su usuario es: ",usuario
 	
-	Escribir "Ingrese una contrase√±a:"
+	Escribir "Ingrese una contraseÒa:"
 	leer contra
 	Limpiar Pantalla
-	Escribir "Repita la misma contrase√±a (respetando may√∫sculas y minusculas):"
+	Escribir "Repita la misma contraseÒa (respetando may˙sculas y minusculas):"
 	leer contraRep
 	
 	si contraRep <> contra Entonces
 		Repetir
-			Escribir "Contrase√±a ingresada incorrectamente, porfavor escriba devuelta su contrase√±a"
+			Escribir "ContraseÒa ingresada incorrectamente, porfavor escriba devuelta su contraseÒa"
 			leer contraRep
 		Hasta Que contra = contraRep
 	FinSi
 	Limpiar Pantalla
-	Escribir "Contrase√±a registrada correctamente"
-	Escribir "Su contrase√±a es: ",contra
+	Escribir "ContraseÒa registrada correctamente"
+	Escribir "Su contraseÒa es: ",contra
 	
-	Escribir "Una vez registrado su usario y contrase√±a debera ingresar sesion"
+	Escribir "Una vez registrado su usario y contraseÒa debera ingresar sesion"
 	Escribir "Ingrese su usario (5 intentos)"
 	leer usuarioRep
 	
@@ -51,12 +51,12 @@ Funcion contador<-registrar
 	SiNo
 		Limpiar Pantalla
 		Escribir "Usuario ingresado correctamente"
-		Escribir "Ingrese su contrase√±a (5 intentos)"
+		Escribir "Ingrese su contraseÒa (5 intentos)"
 		leer contraRep
 		contador<-0
 		Si contraRep <> contra Entonces
 			Repetir
-				Escribir "Contrase√±a ingresada incorrectamente, porfavor escriba devuelta su contrase√±a, le quedan: ",4-contador," intentos"
+				Escribir "ContraseÒa ingresada incorrectamente, porfavor escriba devuelta su contraseÒa, le quedan: ",4-contador," intentos"
 				leer contraRep
 				contador<- contador +1
 			Hasta Que contra = contraRep o contador = 4
@@ -100,10 +100,38 @@ Funcion baja (matriz Por Referencia, horarioBaja Por Referencia, diaBaja Por Ref
 	Fin Si
 FinFuncion
 
+Funcion mostrarMetodosDePago
+	Limpiar Pantalla
+	Escribir "------------------------------------------------------------------"
+	Escribir "Los mÈtodos de pago que aceptamos son: "
+	Escribir "------------------------------------------------------------------"
+	Escribir "Efectivo"
+	Escribir "------------------------------------------------------------------"
+	Escribir "Transferencias"
+	Escribir "------------------------------------------------------------------"
+	Escribir "Debito"
+	Escribir "-------------------------------------------------------------------"
+	Escribir "Tarjetas de CrÈdito de todos los bancos"
+	Escribir "-------------------------------------------------------------------"
+	Escribir "********************---IMPORTANTE---*******************************"
+	Escribir "-------------------------------------------------------------------"
+	Escribir "El Buffet solo  acepta pagos con tarjetas de Debito y/o CrÈdito"
+	Escribir "--------------------------------------------------------------------"
+FinFuncion
+
 Funcion mostrarDescuentos
-	Escribir "-Tenemos un 10% de descuento al pagar la cancha mediante efectivo"
-	Escribir "-Tenemos un 15 % de descuento con tarjeta de debito al pagar en el buffet electronico"
-	Escribir "-Tenemos un 10% de recargo con tarjeta de credito al pagar en el buffet electronico"
+	Limpiar Pantalla
+	Escribir "------------------------------------------------------------------------------------------------------"
+	Escribir "Pagos en efectivo y Transferencias poseen un 10 % de descuento"
+	Escribir "------------------------------------------------------------------------------------------------------"
+	Escribir "Pagos con debito y credito en las canchas no poseen  descuentos ni recargos"
+	Escribir "------------------------------------------------------------------------------------------------------"
+	Escribir "Pagos con debito en el Buffet poseen un 15% de descuento en el total de su compra"
+	Escribir "-------------------------------------------------------------------------------------------------------"
+	Escribir "*********************************----------IMPORTANTE---------*****************************************"
+	Escribir "-------------------------------------------------------------------------------------------------------"
+	Escribir "Pagos con tarjetas de crÈdito en el Buffet poseen un recargo del 10% en el total de su compra"
+	Escribir "-------------------------------------------------------------------------------------------------------"
 FinFuncion
 
 Funcion   mostrarDisponibilidad (matriz Por Referencia )
@@ -199,103 +227,103 @@ Funcion Bar
 	Escribir ""
 	
 	
-	Escribir "1- Men√∫"
+	Escribir "1- Men˙"
 	Escribir "2- Salir"
 	Escribir ""
-	Escribir "Elegir una opci√≥n :   " Sin Saltar
+	Escribir "Elegir una opciÛn :   " Sin Saltar
 	Leer opc
 	
 	si opc = 1 Entonces
 		Repetir
 			Escribir "******************"
-			Escribir "Seleccione su men√∫"
+			Escribir "Seleccione su men˙"
 			Escribir "******************"
 			Escribir ""
 			Escribir "1- CAFETERIA Y BEBIDAS"
 			Escribir "2-SANDWICHS"
 			Escribir "3-COMBOS"
-			Escribir "4-FACTURACI√ìN"
-			Escribir "Elegir una opci√≥n :   " Sin Saltar
+			Escribir "4-FACTURACI”N"
+			Escribir "Elegir una opciÛn :   " Sin Saltar
 			Leer opc1
 			si opc1=1 Entonces
 				Escribir "***************************"
-				Escribir "****CAFETER√çA Y BEBIDAS****"
+				Escribir "****CAFETERÕA Y BEBIDAS****"
 				Escribir "***************************"
 				Escribir " "
-				Escribir "1-   Caf√©------------------------$600"
-				Escribir "2-   Caf√© c/leche----------------$800"
-				Escribir "3-   T√©--------------------------$400"
-				Escribir "4-   T√© c/ leche-----------------$500"
-				Escribir "5 -  Infusi√≥nes -----------------$600"
-				Escribir "6-   L√°grima---------------------$700"
+				Escribir "1-   CafÈ------------------------$600"
+				Escribir "2-   CafÈ c/leche----------------$800"
+				Escribir "3-   TÈ--------------------------$400"
+				Escribir "4-   TÈ c/ leche-----------------$500"
+				Escribir "5 -  InfusiÛnes -----------------$600"
+				Escribir "6-   L·grima---------------------$700"
 				Escribir "7-   Submarino------------------ $800"
-				Escribir "8-   Tragos a elecci√≥n-----------$1500"
+				Escribir "8-   Tragos a elecciÛn-----------$1500"
 				Escribir "9-   Cervezas--------------------$1000"
 				Escribir "10-  Gaseosas--------------------$800"
-				Escribir "Elegir una opci√≥n :   " Sin Saltar
+				Escribir "Elegir una opciÛn :   " Sin Saltar
 				leer opc2
 				
 				Segun opc2 Hacer
 					1:
-						Escribir "Su elecci√≥n es: Caf√©"
+						Escribir "Su elecciÛn es: CafÈ"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer a
 						total <- total + 600 * a
 						v<-v+a
 						
 					2:
-						Escribir "Su elecci√≥n es: Caf√© c/leche"
+						Escribir "Su elecciÛn es: CafÈ c/leche"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer b
 						total <- total + 800 * b
 						v<-v+b
 					3:
-						Escribir "Su elecci√≥n es: T√©"
+						Escribir "Su elecciÛn es: TÈ"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer c
 						total <- total + 400 * c
 						v<-v+c
 					4: 
-						Escribir "Su elecci√≥n es: T√© c/leche"
+						Escribir "Su elecciÛn es: TÈ c/leche"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer d
 						total <- total + 500 * d
 						v<-v+d
 					5:
-						Escribir "Su elecci√≥n es: Infusiones "
+						Escribir "Su elecciÛn es: Infusiones "
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer e
 						total <- total + 600 * e
 						v<-v+e
 						
 					6:
-						Escribir "Su elecci√≥n es: L√°grima"
+						Escribir "Su elecciÛn es: L·grima"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer f
 						total <- total + 700 * f
 						v<-v+f
 					7:
-						Escribir "Su elecci√≥n es: Submarino"
+						Escribir "Su elecciÛn es: Submarino"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer g
 						total <- total + 800 * g
 						v<-v+g
 						
 					8: 
-						Escribir "Su elecci√≥n es: Tragos a elecci√≥n"
+						Escribir "Su elecciÛn es: Tragos a elecciÛn"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer h
 						total <- total + 1500 * h
 						v<-v+h
 						
 					9:
-						Escribir "Su elecci√≥n es: Cervezas"
+						Escribir "Su elecciÛn es: Cervezas"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer l
 						total <- total + 1000 * l
 						v<-v+l
 					10:
-						Escribir "Su elecci√≥n es: Gaseosa"
+						Escribir "Su elecciÛn es: Gaseosa"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer l2
 						total <- total + 800 * l2
@@ -319,70 +347,70 @@ Funcion Bar
 				Escribir "2- Tostados de Queso--------------$1000"
 				Escribir "3- Tostado Arabe------------------$1200"
 				Escribir "4-Medialunas c/u------------------$300"
-				Escribir "5-Teque√±os c/u--------------------$300"
+				Escribir "5-TequeÒos c/u--------------------$300"
 				Escribir "6- Baguel-------------------------$500"
 				Escribir "7-Croque Monsieur-----------------$1500"
 				Escribir "8-Croque Madame-------------------$1500"
 				Escribir " "
-				Escribir "Elegir una opci√≥n :   " Sin Saltar
+				Escribir "Elegir una opciÛn :   " Sin Saltar
 				leer opc3
 				Segun opc3 hacer	
 					1:
-						Escribir "Su elecci√≥n es: Tostados de JYQ"
+						Escribir "Su elecciÛn es: Tostados de JYQ"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer m
 						total <- total + 1000 * m
 						v<-v+m
 						
 					2:
-						Escribir "Su elecci√≥n es: Tostados de Queso"
+						Escribir "Su elecciÛn es: Tostados de Queso"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer n
 						total <- total + 1000 * n
 						v<-v+n
 						
 					3:
-						Escribir "Su elecci√≥n es: Tostados Arabe"
+						Escribir "Su elecciÛn es: Tostados Arabe"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer p
 						total <- total + 1200 * p
 						v<-v+p
 						
 					4: 
-						Escribir "Su elecci√≥n es: Medialunas"
+						Escribir "Su elecciÛn es: Medialunas"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer q
 						total <- total + 300 * q
 						v<-v+q
 					5:
-						Escribir "Su elecci√≥n es: Teque√±os"
+						Escribir "Su elecciÛn es: TequeÒos"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer r
 						total <- total + 300 * r
 						v<-v+r
 						
 					6: 
-						Escribir "Su elecci√≥n es: Baguel"
+						Escribir "Su elecciÛn es: Baguel"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer s
 						total <- total + 500 * s
 						v<-v+s
 						
 					7: 
-						Escribir "Su elecci√≥n es: Croque Monsieur"
+						Escribir "Su elecciÛn es: Croque Monsieur"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer t
 						total <- total + 1500 * t
 						v<-v+t
 					8:
-						Escribir "Su elecci√≥n es: Croque Madame"
+						Escribir "Su elecciÛn es: Croque Madame"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer u
 						total <- total + 1500 * u
 						v<-v+u
 						
 					De Otro Modo:
-						Escribir "La opci√≥n no es v√°lida"
+						Escribir "La opciÛn no es v·lida"
 				FinSegun
 				
 				
@@ -393,29 +421,29 @@ Funcion Bar
 				Escribir "***COMBOS***"
 				Escribir "************"
 				Escribir ""
-				Escribir "1_Croque Monsieur y tazon caf√© c/leche-----------$2000"
-				Escribir "2_Croque madame y taz√≥n caf√© c/leche-------------$2000"
+				Escribir "1_Croque Monsieur y tazon cafÈ c/leche-----------$2000"
+				Escribir "2_Croque madame y tazÛn cafÈ c/leche-------------$2000"
 				Escribir "3- Cafe c/leche y 2 medialunas-------------------$1000"
 				Escribir " "
-				Escribir "Elegir una opci√≥n :   " Sin Saltar
+				Escribir "Elegir una opciÛn :   " Sin Saltar
 				
 				leer opc4
 				
 				Segun opc4 Hacer
 					1: 
-						Escribir "Su elecci√≥n es: Croque Monsieur y Taz√≥n caf√© c/leche"
+						Escribir "Su elecciÛn es: Croque Monsieur y TazÛn cafÈ c/leche"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer aa
 						total <- total + 2000 * aa
 						v<-v+aa
 					2:
-						Escribir "Su elecci√≥n es: Croque Madame y Taz√≥n caf√© c/leche"
+						Escribir "Su elecciÛn es: Croque Madame y TazÛn cafÈ c/leche"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer bb
 						total <- total + 2000 * bb
 						v<-v+bb
 					3:
-						Escribir "Su elecci√≥n es: Caf√© c/leche y 2 medialunas"
+						Escribir "Su elecciÛn es: CafÈ c/leche y 2 medialunas"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer cc
 						total <- total + 1000 * cc
@@ -433,13 +461,13 @@ Funcion Bar
 		Escribir " "
 		Escribir "Seleccionar forma de pago."
 		Escribir "    1.- Debito"
-		Escribir "    2.- Cr√©dito"
+		Escribir "    2.- CrÈdito"
 		Escribir Sin Saltar "    :"
 		Repetir
 			
 			Leer forma_de_pago
 			Si forma_de_pago<1 O forma_de_pago>2 Entonces
-				Escribir Sin Saltar "Valor incorrecto. Ingr√©salo nuevamente.: "
+				Escribir Sin Saltar "Valor incorrecto. IngrÈsalo nuevamente.: "
 			FinSi
 		Hasta Que forma_de_pago>=1 Y forma_de_pago<=2
 		Si forma_de_pago = 1 Entonces
@@ -456,30 +484,30 @@ Funcion Bar
 		Escribir "Su recargo es: $ ", recargo
 		Escribir "TOTAL a pagar: $ ", pago_final
 		Escribir ""
-		Escribir "____________1¬∂¬∂1___1¬∂¬∂1___1¬∂¬∂1____________________"
-		Escribir "____________1¬∂¬∂1___1¬∂¬∂1___1¬∂¬∂¬∂____________________"
-		Escribir "_____________¬∂¬∂¬∂____¬∂¬∂¬∂1___¬∂¬∂¬∂1___________________"
-		Escribir "______________¬∂¬∂¬∂¬∂___1¬∂¬∂¬∂___1¬∂¬∂¬∂__________________"
-		Escribir "_______________1¬∂¬∂¬∂1___¬∂¬∂¬∂1___¬∂¬∂¬∂¬∂________________"
-		Escribir "_________________1¬∂¬∂1____¬∂¬∂¬∂____¬∂¬∂¬∂_______________"
-		Escribir "___________________¬∂¬∂1____¬∂¬∂1____¬∂¬∂1______________"
-		Escribir "___________________¬∂¬∂¬∂____¬∂¬∂¬∂____¬∂¬∂¬∂______________"
-		Escribir "__________________1¬∂¬∂1___1¬∂¬∂1____¬∂¬∂1______________"
-		Escribir "_________________¬∂¬∂¬∂____¬∂¬∂¬∂1___1¬∂¬∂1_______________"
+		Escribir "____________1∂∂1___1∂∂1___1∂∂1____________________"
+		Escribir "____________1∂∂1___1∂∂1___1∂∂∂____________________"
+		Escribir "_____________∂∂∂____∂∂∂1___∂∂∂1___________________"
+		Escribir "______________∂∂∂∂___1∂∂∂___1∂∂∂__________________"
+		Escribir "_______________1∂∂∂1___∂∂∂1___∂∂∂∂________________"
+		Escribir "_________________1∂∂1____∂∂∂____∂∂∂_______________"
+		Escribir "___________________∂∂1____∂∂1____∂∂1______________"
+		Escribir "___________________∂∂∂____∂∂∂____∂∂∂______________"
+		Escribir "__________________1∂∂1___1∂∂1____∂∂1______________"
+		Escribir "_________________∂∂∂____∂∂∂1___1∂∂1_______________"
 		Escribir "________________11_____111_____11_________________"
-		Escribir "__________¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂________"
-		Escribir "1¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂__¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂________"
-		Escribir "1¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂__1¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂________"
-		Escribir "1¬∂¬∂_______¬∂¬∂__1¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂________"
-		Escribir "1¬∂¬∂_______¬∂¬∂__1¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂________"
-		Escribir "1¬∂¬∂_______¬∂¬∂__¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂________"
-		Escribir "1¬∂¬∂_______¬∂¬∂__1¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂________"
-		Escribir "_¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂__¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂________"
-		Escribir " _¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂__¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂_______"
-		Escribir "__________¬∂¬∂___1¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂1________"
+		Escribir "__________∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂________"
+		Escribir "1∂∂∂∂∂∂∂∂∂∂∂__∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂________"
+		Escribir "1∂∂∂∂∂∂∂∂∂∂∂__1∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂________"
+		Escribir "1∂∂_______∂∂__1∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂________"
+		Escribir "1∂∂_______∂∂__1∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂________"
+		Escribir "1∂∂_______∂∂__∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂________"
+		Escribir "1∂∂_______∂∂__1∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂________"
+		Escribir "_∂∂∂∂∂∂∂∂∂∂∂__∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂________"
+		Escribir " _∂∂∂∂∂∂∂∂∂∂∂__∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂_______"
+		Escribir "__________∂∂___1∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂1________"
 		Escribir "111_____________________________________________111"
-		Escribir "1¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂1"
-		Escribir "__¬∂¬∂111111111¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂¬∂111111111¬∂__"
+		Escribir "1∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂1"
+		Escribir "__∂∂111111111∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂∂111111111∂__"
 		SiNo
 		Escribir ""
 		FinSi
@@ -493,7 +521,7 @@ Funcion eleccion <- menu
 	Escribir"---------------------------------------------------------"                                                       
 	Escribir"- 1. Dar de alta una reserva                            -"
 	Escribir"- 2. Dar de baja una reserva                            -"
-	Escribir"- 3. Ver m√©todos de pago                                -"
+	Escribir"- 3. Ver mÈtodos de pago                                -"
 	Escribir"- 4. Ver descuentos                                     -"
 	Escribir"- 5. Ver disponibilidad horaria de la semana            -"
 	Escribir"- 6. Reservar un aperitivo en nuestro buffet            -"
@@ -577,7 +605,7 @@ Algoritmo proyectoLab
 					Si diaBaja<1 o diaBaja>7 Entonces
 						Escribir"Error al ingresar el dia"
 					SiNo
-						Escribir"Ingrese el horario que previamente reserv√≥ (de 12 a 23)"
+						Escribir"Ingrese el horario que previamente reservÛ (de 12 a 23)"
 						leer horarioBaja
 						Si horarioBaja<12 o horarioBaja>23 Entonces
 							Escribir"Error al ingresar el horario"
@@ -588,39 +616,13 @@ Algoritmo proyectoLab
 					
 					
 				3:
-					Escribir "------------------------------------------------------------------"
-					Escribir "Los m√©todos de pago que aceptamos son: "
-					Escribir "------------------------------------------------------------------"
-					Escribir "Efectivo"
-					Escribir "------------------------------------------------------------------"
-					Escribir "Transferencias"
-					Escribir "------------------------------------------------------------------"
-					Escribir "Debito"
-					Escribir "-------------------------------------------------------------------"
-					Escribir "Tarjetas de Cr√©dito de todos los bancos"
-					Escribir "-------------------------------------------------------------------"
-					Escribir "********************---IMPORTANTE---*******************************"
-					Escribir "-------------------------------------------------------------------"
-					Escribir "El Buffet solo  acepta pagos con tarjetas de Debito y/o Cr√©dito"
-					Escribir "--------------------------------------------------------------------"
-					
-					
+					mostrarMetodosDePago
 				4: 
-					Escribir "------------------------------------------------------------------------------------------------------"
-					Escribir "Pagos en efectivo y Transferencias poseen un 10 % de descuento"
-					Escribir "------------------------------------------------------------------------------------------------------"
-					Escribir "Pagos con debito y credito en las canchas no poseen  descuentos ni recargos"
-					Escribir "------------------------------------------------------------------------------------------------------"
-					Escribir "Pagos con debito en el Buffet poseen un 15% de descuento en el total de su compra"
-					Escribir "-------------------------------------------------------------------------------------------------------"
-					Escribir "*********************************----------IMPORTANTE---------*****************************************"
-					Escribir "-------------------------------------------------------------------------------------------------------"
-					Escribir "Pagos con tarjetas de cr√©dito en el Buffet poseen un recargo del 10% en el total de su compra"
-					Escribir "-------------------------------------------------------------------------------------------------------"
+					mostrarDescuentos
 				5:
 					mostrarDisponibilidad(matriz)
 				6: 
-					Bar()
+					Bar
 				7:
 					MostrarLayout
 				De Otro Modo:
