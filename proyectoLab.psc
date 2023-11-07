@@ -83,6 +83,7 @@ Funcion cargarMatriz( matriz Por Referencia )
 Fin Funcion
 
 Funcion   alta ( matriz Por Referencia, horarioAReservar Por Referencia, diaAReservar Por Referencia)
+	Limpiar Pantalla
 	Si  matriz[diaAReservar,horarioAReservar-11,1] = 0 Entonces
 		Escribir"Su reserva se efectuo correctamente"
 		matriz[diaAReservar,horarioAReservar-11,1]<-1
@@ -92,6 +93,7 @@ Funcion   alta ( matriz Por Referencia, horarioAReservar Por Referencia, diaARes
 Fin Funcion
 
 Funcion baja (matriz Por Referencia, horarioBaja Por Referencia, diaBaja Por Referencia)
+	Limpiar Pantalla
 	Si matriz[diaBaja,horarioBaja-11,1]=1 Entonces
 		matriz[diaBaja,horarioBaja-11,1]<-0
 		Escribir"Se dio de baja su reserva correctamente"
@@ -135,6 +137,7 @@ Funcion mostrarDescuentos
 FinFuncion
 
 Funcion   mostrarDisponibilidad (matriz Por Referencia )
+	Limpiar Pantalla
 	Para i<-1 Hasta 7 Con Paso 1 Hacer
 		Si i=1 Entonces
 			Escribir "          Lunes "
@@ -176,6 +179,7 @@ Funcion   mostrarDisponibilidad (matriz Por Referencia )
 Fin Funcion
 
 Funcion Bar
+	Limpiar Pantalla
 	Definir total, descuento Como Real
 	Definir opc,opc2,opc3,opc4,a, b, c, d, e, f, g, h, l, m,n,p,q,r,s,t,u,v,w Como entero
 	
@@ -479,7 +483,6 @@ Funcion Bar
 		FinSi
 		pago_final <- total+recargo-descuento
 		Escribir " "
-		Escribir "Nombre de usuario: ", usuario
 		Escribir "Su descuento es: $ ", descuento
 		Escribir "Su recargo es: $ ", recargo
 		Escribir "TOTAL a pagar: $ ", pago_final
