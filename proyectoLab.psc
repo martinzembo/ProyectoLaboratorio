@@ -1,11 +1,72 @@
 Funcion contador<-registrar 
 	Definir usuario,usuarioRep,contra,contraRep Como Caracter
 	Definir contador Como Entero
+
+escribir ""
+Escribir ""
+Escribir ""
+Escribir ""	
+Escribir "	                                    	  ######    ####    #######  ##   ##  ##   ##  #######  ##   ##   ####    #####     #####    #####"
+Escribir "	                                    	  ##  ##    ##      ##   #  ###  ##  ##   ##   ##   #  ###  ##    ##      ## ##   ##   ##  ##   ##"
+Escribir "	                                    	  ##  ##    ##      ## #    #### ##   ## ##    ## #    #### ##    ##      ##  ##  ##   ##  #"
+Escribir "	                                    	  #####     ##      ####    ## ####   ## ##    ####    ## ####    ##      ##  ##  ##   ##   ######"
+Escribir "                                     	 ##  ##    ##      ## #    ##  ###    ###     ## #    ##  ###    ##      ##  ##  ##   ##       ##"
+Escribir "	                                      ##  ##    ##      ##   #  ##   ##    ###     ##   #  ##   ##    ##      ## ##   ##   ##  ##   ##"
+Escribir "	                                    	  ######    ####    ####### ##   ##     #     #######  ##   ##   ####    #####     #####    #####"
+Escribir ""
+escribir ""
+Escribir ""
+Escribir ""
+Escribir ""
+
+
 	
+Escribir "	                                                        ##     ####                ####   ####     ##   ##  ######"
+Escribir "	                                                       ####     ##                ##  ##   ##      ##   ##   ##  ##"
+Escribir "	                                                      ##  ##    ##               ##        ##      ##   ##   ##  ##"
+Escribir "	                                                      ##  ##    ##               ##        ##      ##   ##   #####"
+Escribir "                                                      ######    ##   #           ##        ##   #  ##   ##   ##  ##"
+Escribir "	                                                      ##  ##    ##  ##            ##  ##   ##  ##  ##   ##   ##  ##"
+Escribir "	                                                      ##  ##   #######             ####   #######   #####   ######"
+Escribir ""
+Escribir ""
+Escribir ""
+Escribir ""
+Escribir ""
+	
+	
+	
+	Escribir "____________$$$$$$$$$$$$$                                                                                                              ____________$$$$$$$$$$$$$"
+	Escribir "________$$$$$$$ _________$$$                                                                                                           ________$$$$$$$ _________$$$"
+	Escribir "_____$$$$$$$$$ ___________ $$$$                                                                                                        _____$$$$$$$$$ ___________ $$$$"
+	Escribir "____$$_$$$____$$ ________ $___$$                          #######  ####                ####    #####   ####                            ____$$_$$$____$$ ________ $___$$"
+	Escribir "___$___$________$ ______ $______$$                        ##   #   ##                ##  ##  ##   ##   ##                              ___$___$________$ ______ $______$$"       
+	Escribir "__$___$ _________ $$$$$$$$_______$$                       ## #     ##               ##       ##   ##   ##                              __$___$ _________ $$$$$$$$_______$$"
+	Escribir "_$___$$ ________ $$$$$$$$$________$$                      ####     ##               ##       ##   ##   ##                               _$___$$ ________ $$$$$$$$$________$$"     
+	Escribir "$$___$ _________ $$$$$$$$$$________$                      ## #     ##   #           ##  ###  ##   ##   ##   #                           $$___$ _________ $$$$$$$$$$________$"
+	Escribir "$___$$ _______$$$$$$$$$$$$$$_______$                      ##   #   ##  ##            ##  ##  ##   ##   ##  ##                           $___$$ _______$$$$$$$$$$$$$$_______$"
+	Escribir "$__$$$$$ __ $$$___$$$$$$$__ $$$$___$$                     #######  #######             #####   #####   #######                          $__$$$$$ __ $$$___$$$$$$$__ $$$$___$$"
+	Escribir "$$$$$$$$$$$ _______ $$$________$$$$$                                                                                                    $$$$$$$$$$$ _______ $$$________$$$$$"
+	Escribir "$_$$$$$$$ __________ $__________$$$$                                                                                                    $_$$$$$$$ __________ $__________$$$$"
+	Escribir "$_$$$$$$$ __________ $__________$$$$                                                                                                    $_$$$$$$$ __________ $__________$$$$"
+	Escribir "_$_$$$$$$ _________ $$__________ $$$                                                                                                    _$_$$$$$$ _________ $$__________ $$$"
+	Escribir "__$_$$__$$ ________ $_________$$_$$                                                                                                     __$_$$__$$ ________ $_________$$_$$"
+	Escribir "___$$_____$$$ ___ $$$$$____$$$___$                                                                                                      ___$$_____$$$ ___ $$$$$____$$$___$"
+	Escribir "____$$ _____ $$$$$$$$$$$$$$$___$$                                                                                                       ___$$_____$$$ ___ $$$$$____$$$___$"
+	Escribir "_____$$$ _____ $$$$$$$$$$____$$                                                                                                         _____$$$ _____ $$$$$$$$$$____$$"
+	Escribir "_______$$$$ __ $$$$$$$$$__$$$                                                                                                           _______$$$$ __ $$$$$$$$$__$$$"
+	Escribir "__________$$$$$ _____ $$$$                                                                                                              __________$$$$$ _____ $$$$"
+	Escribir "______________$$$$$$$                                                                                                                   ______________$$$$$$$"
+	
+
+
+
+
+
 	Escribir "Para registrarse por primera vez debe ingresar un nombre de usuario: "
 	leer usuario
 	Limpiar Pantalla
-	Escribir "Repita el mismo nombre de usuario (respetando mayúsculas y minusculas): "
+	Escribir "Repita el mismo nombre de usuario (respetando mayÃºsculas y minusculas): "
 	leer usuarioRep
 	
 	si usuarioRep <> usuario Entonces
@@ -18,23 +79,23 @@ Funcion contador<-registrar
 	Escribir "Usuario registrado correctamente"
 	Escribir "Su usuario es: ",usuario
 	
-	Escribir "Ingrese una contraseña:"
+	Escribir "Ingrese una contraseÃ±a:"
 	leer contra
 	Limpiar Pantalla
-	Escribir "Repita la misma contraseña (respetando mayúsculas y minusculas):"
+	Escribir "Repita la misma contraseÃ±a (respetando mayÃºsculas y minusculas):"
 	leer contraRep
 	
 	si contraRep <> contra Entonces
 		Repetir
-			Escribir "Contraseña ingresada incorrectamente, porfavor escriba devuelta su contraseña"
+			Escribir "ContraseÃ±a ingresada incorrectamente, porfavor escriba devuelta su contraseÃ±a"
 			leer contraRep
 		Hasta Que contra = contraRep
 	FinSi
 	Limpiar Pantalla
-	Escribir "Contraseña registrada correctamente"
-	Escribir "Su contraseña es: ",contra
+	Escribir "ContraseÃ±a registrada correctamente"
+	Escribir "Su contraseÃ±a es: ",contra
 	
-	Escribir "Una vez registrado su usario y contraseña debera ingresar sesion"
+	Escribir "Una vez registrado su usario y contraseÃ±a debera ingresar sesion"
 	Escribir "Ingrese su usario (5 intentos)"
 	leer usuarioRep
 	
@@ -51,12 +112,12 @@ Funcion contador<-registrar
 	SiNo
 		Limpiar Pantalla
 		Escribir "Usuario ingresado correctamente"
-		Escribir "Ingrese su contraseña (5 intentos)"
+		Escribir "Ingrese su contraseÃ±a (5 intentos)"
 		leer contraRep
 		contador<-0
 		Si contraRep <> contra Entonces
 			Repetir
-				Escribir "Contraseña ingresada incorrectamente, porfavor escriba devuelta su contraseña, le quedan: ",4-contador," intentos"
+				Escribir "ContraseÃ±a ingresada incorrectamente, porfavor escriba devuelta su contraseÃ±a, le quedan: ",4-contador," intentos"
 				leer contraRep
 				contador<- contador +1
 			Hasta Que contra = contraRep o contador = 4
@@ -105,7 +166,7 @@ FinFuncion
 Funcion mostrarMetodosDePago
 	Limpiar Pantalla
 	Escribir "------------------------------------------------------------------"
-	Escribir "Los métodos de pago que aceptamos son: "
+	Escribir "Los mÃ©todos de pago que aceptamos son: "
 	Escribir "------------------------------------------------------------------"
 	Escribir "Efectivo"
 	Escribir "------------------------------------------------------------------"
@@ -113,11 +174,11 @@ Funcion mostrarMetodosDePago
 	Escribir "------------------------------------------------------------------"
 	Escribir "Debito"
 	Escribir "-------------------------------------------------------------------"
-	Escribir "Tarjetas de Crédito de todos los bancos"
+	Escribir "Tarjetas de CrÃ©dito de todos los bancos"
 	Escribir "-------------------------------------------------------------------"
 	Escribir "********************---IMPORTANTE---*******************************"
 	Escribir "-------------------------------------------------------------------"
-	Escribir "El Buffet solo  acepta pagos con tarjetas de Debito y/o Crédito"
+	Escribir "El Buffet solo  acepta pagos con tarjetas de Debito y/o CrÃ©dito"
 	Escribir "--------------------------------------------------------------------"
 FinFuncion
 
@@ -132,7 +193,7 @@ Funcion mostrarDescuentos
 	Escribir "-------------------------------------------------------------------------------------------------------"
 	Escribir "*********************************----------IMPORTANTE---------*****************************************"
 	Escribir "-------------------------------------------------------------------------------------------------------"
-	Escribir "Pagos con tarjetas de crédito en el Buffet poseen un recargo del 10% en el total de su compra"
+	Escribir "Pagos con tarjetas de crÃ©dito en el Buffet poseen un recargo del 10% en el total de su compra"
 	Escribir "-------------------------------------------------------------------------------------------------------"
 FinFuncion
 
@@ -231,103 +292,103 @@ Funcion Bar
 	Escribir ""
 	
 	
-	Escribir "1- Menú"
+	Escribir "1- MenÃº"
 	Escribir "2- Salir"
 	Escribir ""
-	Escribir "Elegir una opción :   " Sin Saltar
+	Escribir "Elegir una opciÃ³n :   " Sin Saltar
 	Leer opc
 	
 	si opc = 1 Entonces
 		Repetir
 			Escribir "******************"
-			Escribir "Seleccione su menú"
+			Escribir "Seleccione su menÃº"
 			Escribir "******************"
 			Escribir ""
 			Escribir "1- CAFETERIA Y BEBIDAS"
 			Escribir "2-SANDWICHS"
 			Escribir "3-COMBOS"
-			Escribir "4-FACTURACIÓN"
-			Escribir "Elegir una opción :   " Sin Saltar
+			Escribir "4-FACTURACIÃ“N"
+			Escribir "Elegir una opciÃ³n :   " Sin Saltar
 			Leer opc1
 			si opc1=1 Entonces
 				Escribir "***************************"
-				Escribir "****CAFETERÍA Y BEBIDAS****"
+				Escribir "****CAFETERÃA Y BEBIDAS****"
 				Escribir "***************************"
 				Escribir " "
-				Escribir "1-   Café------------------------$600"
-				Escribir "2-   Café c/leche----------------$800"
-				Escribir "3-   Té--------------------------$400"
-				Escribir "4-   Té c/ leche-----------------$500"
-				Escribir "5 -  Infusiónes -----------------$600"
-				Escribir "6-   Lágrima---------------------$700"
+				Escribir "1-   CafÃ©------------------------$600"
+				Escribir "2-   CafÃ© c/leche----------------$800"
+				Escribir "3-   TÃ©--------------------------$400"
+				Escribir "4-   TÃ© c/ leche-----------------$500"
+				Escribir "5 -  InfusiÃ³nes -----------------$600"
+				Escribir "6-   LÃ¡grima---------------------$700"
 				Escribir "7-   Submarino------------------ $800"
-				Escribir "8-   Tragos a elección-----------$1500"
+				Escribir "8-   Tragos a elecciÃ³n-----------$1500"
 				Escribir "9-   Cervezas--------------------$1000"
 				Escribir "10-  Gaseosas--------------------$800"
-				Escribir "Elegir una opción :   " Sin Saltar
+				Escribir "Elegir una opciÃ³n :   " Sin Saltar
 				leer opc2
 				
 				Segun opc2 Hacer
 					1:
-						Escribir "Su elección es: Café"
+						Escribir "Su elecciÃ³n es: CafÃ©"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer a
 						total <- total + 600 * a
 						v<-v+a
 						
 					2:
-						Escribir "Su elección es: Café c/leche"
+						Escribir "Su elecciÃ³n es: CafÃ© c/leche"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer b
 						total <- total + 800 * b
 						v<-v+b
 					3:
-						Escribir "Su elección es: Té"
+						Escribir "Su elecciÃ³n es: TÃ©"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer c
 						total <- total + 400 * c
 						v<-v+c
 					4: 
-						Escribir "Su elección es: Té c/leche"
+						Escribir "Su elecciÃ³n es: TÃ© c/leche"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer d
 						total <- total + 500 * d
 						v<-v+d
 					5:
-						Escribir "Su elección es: Infusiones "
+						Escribir "Su elecciÃ³n es: Infusiones "
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer e
 						total <- total + 600 * e
 						v<-v+e
 						
 					6:
-						Escribir "Su elección es: Lágrima"
+						Escribir "Su elecciÃ³n es: LÃ¡grima"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer f
 						total <- total + 700 * f
 						v<-v+f
 					7:
-						Escribir "Su elección es: Submarino"
+						Escribir "Su elecciÃ³n es: Submarino"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer g
 						total <- total + 800 * g
 						v<-v+g
 						
 					8: 
-						Escribir "Su elección es: Tragos a elección"
+						Escribir "Su elecciÃ³n es: Tragos a elecciÃ³n"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer h
 						total <- total + 1500 * h
 						v<-v+h
 						
 					9:
-						Escribir "Su elección es: Cervezas"
+						Escribir "Su elecciÃ³n es: Cervezas"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer l
 						total <- total + 1000 * l
 						v<-v+l
 					10:
-						Escribir "Su elección es: Gaseosa"
+						Escribir "Su elecciÃ³n es: Gaseosa"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer l2
 						total <- total + 800 * l2
@@ -351,70 +412,70 @@ Funcion Bar
 				Escribir "2- Tostados de Queso--------------$1000"
 				Escribir "3- Tostado Arabe------------------$1200"
 				Escribir "4-Medialunas c/u------------------$300"
-				Escribir "5-Tequeños c/u--------------------$300"
+				Escribir "5-TequeÃ±os c/u--------------------$300"
 				Escribir "6- Baguel-------------------------$500"
 				Escribir "7-Croque Monsieur-----------------$1500"
 				Escribir "8-Croque Madame-------------------$1500"
 				Escribir " "
-				Escribir "Elegir una opción :   " Sin Saltar
+				Escribir "Elegir una opciÃ³n :   " Sin Saltar
 				leer opc3
 				Segun opc3 hacer	
 					1:
-						Escribir "Su elección es: Tostados de JYQ"
+						Escribir "Su elecciÃ³n es: Tostados de JYQ"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer m
 						total <- total + 1000 * m
 						v<-v+m
 						
 					2:
-						Escribir "Su elección es: Tostados de Queso"
+						Escribir "Su elecciÃ³n es: Tostados de Queso"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer n
 						total <- total + 1000 * n
 						v<-v+n
 						
 					3:
-						Escribir "Su elección es: Tostados Arabe"
+						Escribir "Su elecciÃ³n es: Tostados Arabe"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer p
 						total <- total + 1200 * p
 						v<-v+p
 						
 					4: 
-						Escribir "Su elección es: Medialunas"
+						Escribir "Su elecciÃ³n es: Medialunas"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer q
 						total <- total + 300 * q
 						v<-v+q
 					5:
-						Escribir "Su elección es: Tequeños"
+						Escribir "Su elecciÃ³n es: TequeÃ±os"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer r
 						total <- total + 300 * r
 						v<-v+r
 						
 					6: 
-						Escribir "Su elección es: Baguel"
+						Escribir "Su elecciÃ³n es: Baguel"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer s
 						total <- total + 500 * s
 						v<-v+s
 						
 					7: 
-						Escribir "Su elección es: Croque Monsieur"
+						Escribir "Su elecciÃ³n es: Croque Monsieur"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer t
 						total <- total + 1500 * t
 						v<-v+t
 					8:
-						Escribir "Su elección es: Croque Madame"
+						Escribir "Su elecciÃ³n es: Croque Madame"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer u
 						total <- total + 1500 * u
 						v<-v+u
 						
 					De Otro Modo:
-						Escribir "La opción no es válida"
+						Escribir "La opciÃ³n no es vÃ¡lida"
 				FinSegun
 				
 				
@@ -425,29 +486,29 @@ Funcion Bar
 				Escribir "***COMBOS***"
 				Escribir "************"
 				Escribir ""
-				Escribir "1_Croque Monsieur y tazon café c/leche-----------$2000"
-				Escribir "2_Croque madame y tazón café c/leche-------------$2000"
+				Escribir "1_Croque Monsieur y tazon cafÃ© c/leche-----------$2000"
+				Escribir "2_Croque madame y tazÃ³n cafÃ© c/leche-------------$2000"
 				Escribir "3- Cafe c/leche y 2 medialunas-------------------$1000"
 				Escribir " "
-				Escribir "Elegir una opción :   " Sin Saltar
+				Escribir "Elegir una opciÃ³n :   " Sin Saltar
 				
 				leer opc4
 				
 				Segun opc4 Hacer
 					1: 
-						Escribir "Su elección es: Croque Monsieur y Tazón café c/leche"
+						Escribir "Su elecciÃ³n es: Croque Monsieur y TazÃ³n cafÃ© c/leche"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer aa
 						total <- total + 2000 * aa
 						v<-v+aa
 					2:
-						Escribir "Su elección es: Croque Madame y Tazón café c/leche"
+						Escribir "Su elecciÃ³n es: Croque Madame y TazÃ³n cafÃ© c/leche"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer bb
 						total <- total + 2000 * bb
 						v<-v+bb
 					3:
-						Escribir "Su elección es: Café c/leche y 2 medialunas"
+						Escribir "Su elecciÃ³n es: CafÃ© c/leche y 2 medialunas"
 						Escribir "Ingrese cantidad: " Sin Saltar
 						leer cc
 						total <- total + 1000 * cc
@@ -465,13 +526,13 @@ Funcion Bar
 		Escribir " "
 		Escribir "Seleccionar forma de pago."
 		Escribir "    1.- Debito"
-		Escribir "    2.- Crédito"
+		Escribir "    2.- CrÃ©dito"
 		Escribir Sin Saltar "    :"
 		Repetir
 			
 			Leer forma_de_pago
 			Si forma_de_pago<1 O forma_de_pago>2 Entonces
-				Escribir Sin Saltar "Valor incorrecto. Ingrésalo nuevamente.: "
+				Escribir Sin Saltar "Valor incorrecto. IngrÃ©salo nuevamente.: "
 			FinSi
 		Hasta Que forma_de_pago>=1 Y forma_de_pago<=2
 		Si forma_de_pago = 1 Entonces
@@ -487,30 +548,30 @@ Funcion Bar
 		Escribir "Su recargo es: $ ", recargo
 		Escribir "TOTAL a pagar: $ ", pago_final
 		Escribir ""
-		Escribir "____________1¶¶1___1¶¶1___1¶¶1____________________"
-		Escribir "____________1¶¶1___1¶¶1___1¶¶¶____________________"
-		Escribir "_____________¶¶¶____¶¶¶1___¶¶¶1___________________"
-		Escribir "______________¶¶¶¶___1¶¶¶___1¶¶¶__________________"
-		Escribir "_______________1¶¶¶1___¶¶¶1___¶¶¶¶________________"
-		Escribir "_________________1¶¶1____¶¶¶____¶¶¶_______________"
-		Escribir "___________________¶¶1____¶¶1____¶¶1______________"
-		Escribir "___________________¶¶¶____¶¶¶____¶¶¶______________"
-		Escribir "__________________1¶¶1___1¶¶1____¶¶1______________"
-		Escribir "_________________¶¶¶____¶¶¶1___1¶¶1_______________"
+		Escribir "____________1Â¶Â¶1___1Â¶Â¶1___1Â¶Â¶1____________________"
+		Escribir "____________1Â¶Â¶1___1Â¶Â¶1___1Â¶Â¶Â¶____________________"
+		Escribir "_____________Â¶Â¶Â¶____Â¶Â¶Â¶1___Â¶Â¶Â¶1___________________"
+		Escribir "______________Â¶Â¶Â¶Â¶___1Â¶Â¶Â¶___1Â¶Â¶Â¶__________________"
+		Escribir "_______________1Â¶Â¶Â¶1___Â¶Â¶Â¶1___Â¶Â¶Â¶Â¶________________"
+		Escribir "_________________1Â¶Â¶1____Â¶Â¶Â¶____Â¶Â¶Â¶_______________"
+		Escribir "___________________Â¶Â¶1____Â¶Â¶1____Â¶Â¶1______________"
+		Escribir "___________________Â¶Â¶Â¶____Â¶Â¶Â¶____Â¶Â¶Â¶______________"
+		Escribir "__________________1Â¶Â¶1___1Â¶Â¶1____Â¶Â¶1______________"
+		Escribir "_________________Â¶Â¶Â¶____Â¶Â¶Â¶1___1Â¶Â¶1_______________"
 		Escribir "________________11_____111_____11_________________"
-		Escribir "__________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________"
-		Escribir "1¶¶¶¶¶¶¶¶¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________"
-		Escribir "1¶¶¶¶¶¶¶¶¶¶¶__1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________"
-		Escribir "1¶¶_______¶¶__1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________"
-		Escribir "1¶¶_______¶¶__1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________"
-		Escribir "1¶¶_______¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________"
-		Escribir "1¶¶_______¶¶__1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________"
-		Escribir "_¶¶¶¶¶¶¶¶¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶________"
-		Escribir " _¶¶¶¶¶¶¶¶¶¶¶__¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_______"
-		Escribir "__________¶¶___1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1________"
+		Escribir "__________Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶________"
+		Escribir "1Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶__Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶________"
+		Escribir "1Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶__1Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶________"
+		Escribir "1Â¶Â¶_______Â¶Â¶__1Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶________"
+		Escribir "1Â¶Â¶_______Â¶Â¶__1Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶________"
+		Escribir "1Â¶Â¶_______Â¶Â¶__Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶________"
+		Escribir "1Â¶Â¶_______Â¶Â¶__1Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶________"
+		Escribir "_Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶__Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶________"
+		Escribir " _Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶__Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶_______"
+		Escribir "__________Â¶Â¶___1Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶1________"
 		Escribir "111_____________________________________________111"
-		Escribir "1¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶1"
-		Escribir "__¶¶111111111¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶111111111¶__"
+		Escribir "1Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶1"
+		Escribir "__Â¶Â¶111111111Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶Â¶111111111Â¶__"
 		SiNo
 		Escribir ""
 		FinSi
@@ -524,7 +585,7 @@ Funcion eleccion <- menu
 	Escribir"---------------------------------------------------------"                                                       
 	Escribir"- 1. Dar de alta una reserva                            -"
 	Escribir"- 2. Dar de baja una reserva                            -"
-	Escribir"- 3. Ver métodos de pago                                -"
+	Escribir"- 3. Ver mÃ©todos de pago                                -"
 	Escribir"- 4. Ver descuentos                                     -"
 	Escribir"- 5. Ver disponibilidad horaria de la semana            -"
 	Escribir"- 6. Reservar un aperitivo en nuestro buffet            -"
@@ -608,7 +669,7 @@ Algoritmo proyectoLab
 					Si diaBaja<1 o diaBaja>7 Entonces
 						Escribir"Error al ingresar el dia"
 					SiNo
-						Escribir"Ingrese el horario que previamente reservó (de 12 a 23)"
+						Escribir"Ingrese el horario que previamente reservÃ³ (de 12 a 23)"
 						leer horarioBaja
 						Si horarioBaja<12 o horarioBaja>23 Entonces
 							Escribir"Error al ingresar el horario"
