@@ -242,35 +242,11 @@ Fin Funcion
 Funcion Bar
 	Limpiar Pantalla
 	Definir total, descuento Como Real
-	Definir opc,opc2,opc3,opc4,a, b, c, d, e, f, g, h, l, m,n,p,q,r,s,t,u,v,w Como entero
+	Definir  a1,b1, c1, d1, e1, f1, g1, h1, l1, m1,n1,p1,q1,r1,s1,t1,u1,v,w1,aa1,bb1,cc1,z1 Como entero
+	Definir opc,opc1,opc2,opc3,opc4,a,b,c,d,e,f,g,h,l,m,n,p,q,r,s,t,u,w,aa,bb,cc,z Como Caracter
+	Definir validarnum Como Logico
 	
 	total <-0
-	opc<-0
-	opc2<-0
-	opc3<-0
-	a<-0
-	b<-0
-	c<-0
-	d<-0
-	e<-0
-	f<-0
-	g<-0
-	h<-0
-	l<-0
-	m<-0
-	n<-0
-	p<-0
-	q<-0
-	r<-0
-	s<-0
-	t<-0
-	u<-0
-	v<-0
-	w<-0
-	aa<-0
-	bb<-0
-	cc<-0
-	l2<-0
 	credito <- 0;
 	debito <- 0;
 	
@@ -292,223 +268,431 @@ Funcion Bar
 	Escribir ""
 	
 	
-	Escribir "1- Menú"
-	Escribir "2- Salir"
-	Escribir ""
-	Escribir "Elegir una opción :   " Sin Saltar
-	Leer opc
-	
+
+	Repetir
+		Escribir "1- Menú"
+		Escribir "2- Salir"
+		Escribir ""
+		Escribir "Elegir una opción :   " Sin Saltar
+		Leer opc
+		validarnum<-validar(opc)
+	Hasta Que validarnum=Verdadero
 	Segun opc Hacer
-		1:
+		'1':
 		Repetir
-			Escribir "******************"
-			Escribir "Seleccione su menú"
-			Escribir "******************"
-			Escribir ""
-			Escribir "1- CAFETERIA Y BEBIDAS"
-			Escribir "2-SANDWICHS"
-			Escribir "3-COMBOS"
-			Escribir "4-FACTURACIÓN"
-			Escribir "Elegir una opción :   " Sin Saltar
-			Leer opc1
+			Repetir
+				Escribir "******************"
+				Escribir "Seleccione su menú"
+				Escribir "******************"
+				Escribir ""
+				Escribir "1- CAFETERIA Y BEBIDAS"
+				Escribir "2-SANDWICHS"
+				Escribir "3-COMBOS"
+				Escribir "4-FACTURACIÓN"
+				Escribir "Elegir una opción :   " Sin Saltar
+				Leer opc1
+				validarnum<-validar(opc1)
+			Hasta Que validarnum=Verdadero
+			 
 			Segun opc1 Hacer
-				1:
-					Escribir "***************************"
-					Escribir "****CAFETERÍA Y BEBIDAS****"
-					Escribir "***************************"
-					Escribir " "
-					Escribir "1-   Café------------------------$600"
-					Escribir "2-   Café c/leche----------------$800"
-					Escribir "3-   Té--------------------------$400"
-					Escribir "4-   Té c/ leche-----------------$500"
-					Escribir "5 -  Infusiónes -----------------$600"
-					Escribir "6-   Lágrima---------------------$700"
-					Escribir "7-   Submarino------------------ $800"
-					Escribir "8-   Tragos a elección-----------$1500"
-					Escribir "9-   Cervezas--------------------$1000"
-					Escribir "10-  Gaseosas--------------------$800"
-					Escribir "Elegir una opción :   " Sin Saltar
-					leer opc2
+				'1':
+					Repetir
+						Escribir "***************************"
+						Escribir "****CAFETERÍA Y BEBIDAS****"
+						Escribir "***************************"
+						Escribir " "
+						Escribir "1-   Café------------------------$600"
+						Escribir "2-   Café c/leche----------------$800"
+						Escribir "3-   Té--------------------------$400"
+						Escribir "4-   Té c/ leche-----------------$500"
+						Escribir "5 -  Infusiónes -----------------$600"
+						Escribir "6-   Lágrima---------------------$700"
+						Escribir "7-   Submarino------------------ $800"
+						Escribir "8-   Tragos a elección-----------$1500"
+						Escribir "9-   Cervezas--------------------$1000"
+						Escribir "10-  Gaseosas--------------------$800"
+						Escribir "Elegir una opción :   " Sin Saltar
+						leer opc2
+						validarnum<-validar(opc2)
+					Hasta Que validarnum=Verdadero
+					
 					
 					Segun opc2 Hacer
-						1:
-							Escribir "Su elección es: Café"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer a
-							total <- total + 600 * a
-							v<-v+a
+						'1':
+							Repetir
+								Escribir "Su elección es: Café"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer a
+								validarnum<-validar(a)
+							Hasta Que validarnum=Verdadero
+							a1<-convertirANumero(a)
+							Si a1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 600 * a1
+								v<-v+a1
+							FinSi
 							
-						2:
-							Escribir "Su elección es: Café c/leche"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer b
-							total <- total + 800 * b
-							v<-v+b
-						3:
-							Escribir "Su elección es: Té"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer c
-							total <- total + 400 * c
-							v<-v+c
-						4: 
-							Escribir "Su elección es: Té c/leche"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer d
-							total <- total + 500 * d
-							v<-v+d
-						5:
-							Escribir "Su elección es: Infusiones "
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer e
-							total <- total + 600 * e
-							v<-v+e
+						'2':
+							Repetir
+								Escribir "Su elección es: Café c/leche"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer b
+								validarnum<-validar(b)
+							Hasta Que validarnum=Verdadero
+							b1<-ConvertirANumero(b)
+							Si b1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * b1
+								v<-v+b1
+							FinSi
 							
-						6:
-							Escribir "Su elección es: Lágrima"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer f
-							total <- total + 700 * f
-							v<-v+f
-						7:
-							Escribir "Su elección es: Submarino"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer g
-							total <- total + 800 * g
-							v<-v+g
+						'3':
+							Repetir
+								Escribir "Su elección es: Té"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer c
+								validarnum<-validar(c)
+							Hasta Que validarnum=Verdadero
+							c1<-ConvertirANumero(c)
+							Si c1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * c1
+								v<-v+c1
+							FinSi
+						
+						'4': 
+							Repetir
+								Escribir "Su elección es: Té c/leche"
+								Escribir "Ingrese cantidad (maximo de 10):  " Sin Saltar
+								leer d
+								validarnum<-validar(d)
+							Hasta Que validarnum=Verdadero
+							d1<-ConvertirANumero(d)
+							Si d1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * d1
+								v<-v+d1
+							FinSi
+					
+						'5':
+							Repetir
+								Escribir "Su elección es: Infusiones "
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer e
+								validarnum<-validar(e)
+							Hasta Que validarnum=Verdadero
+							e1<-ConvertirANumero(e)
+							Si e1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * e1
+								v<-v+e1
+							FinSi
+
+						'6':
+							Repetir
+								Escribir "Su elección es: Lágrima"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer f
+								validarnum<-validar(f)
+							Hasta Que validarnum=Verdadero
+							f1<-ConvertirANumero(f)
+							Si f1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * f1
+								v<-v+f1
+							FinSi
 							
-						8: 
-							Escribir "Su elección es: Tragos a elección"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer h
-							total <- total + 1500 * h
-							v<-v+h
+						'7':
+							Repetir
+								Escribir "Su elección es: Submarino"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer g
+								validarnum<-validar(g)
+							Hasta Que validarnum=Verdadero
+							g1<-ConvertirANumero(g)
+							Si g1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * g1
+								v<-v+g1
+							FinSi
+
+						'8': 
+							Repetir
+								Escribir "Su elección es: Tragos a elección"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer h
+								validarnum<-validar(h)
+							Hasta Que validarnum=Verdadero
 							
-						9:
-							Escribir "Su elección es: Cervezas"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer l
-							total <- total + 1000 * l
-							v<-v+l
-						10:
-							Escribir "Su elección es: Gaseosa"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer l2
-							total <- total + 800 * l2
-							v<-v+l2
+							h1<-ConvertirANumero(h)
+							Si h1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * h1
+								v<-v+h1
+							FinSi
+
+						'9':
+							Repetir
+								Escribir "Su elección es: Cervezas"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer z
+								validarnum<-validar(z)
+							Hasta Que validarnum=Verdadero
 							
+							z1<-ConvertirANumero(z)
+							Si z1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * z1
+								v<-v+z1
+							FinSi
+
+						'10':
+							Repetir
+								Escribir "Su elección es: Gaseosa"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer l
+								validarnum<-validar(l)
+							Hasta Que validarnum=Verdadero
+							
+							l1<-ConvertirANumero(l)
+							Si l1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * l1
+								v<-v+l1
+							FinSi
+
 						De Otro Modo:
 							Escribir "la opcion no es correcta"
-							
-							
-							
+	
 					FinSegun
-				2:
-					Escribir "***************"
-					Escribir "***SANDWICHS***"
-					Escribir "***************"
-					Escribir " "
-					Escribir "1- Tostados de JyQ----------------$1000"
-					Escribir "2- Tostados de Queso--------------$1000"
-					Escribir "3- Tostado Arabe------------------$1200"
-					Escribir "4-Medialunas c/u------------------$300"
-					Escribir "5-Tequeños c/u--------------------$300"
-					Escribir "6- Baguel-------------------------$500"
-					Escribir "7-Croque Monsieur-----------------$1500"
-					Escribir "8-Croque Madame-------------------$1500"
-					Escribir " "
-					Escribir "Elegir una opción :   " Sin Saltar
-					leer opc3
+				'2':
+					Repetir
+						Escribir "***************"
+						Escribir "***SANDWICHS***"
+						Escribir "***************"
+						Escribir " "
+						Escribir "1- Tostados de JyQ----------------$1000"
+						Escribir "2- Tostados de Queso--------------$1000"
+						Escribir "3- Tostado Arabe------------------$1200"
+						Escribir "4-Medialunas c/u------------------$300"
+						Escribir "5-Tequeños c/u--------------------$300"
+						Escribir "6- Baguel-------------------------$500"
+						Escribir "7-Croque Monsieur-----------------$1500"
+						Escribir "8-Croque Madame-------------------$1500"
+						Escribir " "
+						Escribir "Elegir una opción :   " Sin Saltar
+						leer opc3
+						validarnum<-validar(opc3)
+					Hasta Que validarnum=Verdadero
+					
 					Segun opc3 hacer	
-						1:
-							Escribir "Su elección es: Tostados de JYQ"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer m
-							total <- total + 1000 * m
-							v<-v+m
+						'1':
+							Repetir
+								Escribir "Su elección es: Tostados de JYQ"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer m
+								validarnum<-validar(m)
+							Hasta Que validarnum=Verdadero
 							
-						2:
-							Escribir "Su elección es: Tostados de Queso"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer n
-							total <- total + 1000 * n
-							v<-v+n
+							m1<-ConvertirANumero(m)
+							Si m1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * m1
+								v<-v+m1
+							FinSi
 							
-						3:
-							Escribir "Su elección es: Tostados Arabe"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer p
-							total <- total + 1200 * p
-							v<-v+p
+						'2':
+							Repetir
+								Escribir "Su elección es: Tostados de Queso"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer n
+								validarnum<-validar(n)
+							Hasta Que validarnum=Verdadero
 							
-						4: 
-							Escribir "Su elección es: Medialunas"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer q
-							total <- total + 300 * q
-							v<-v+q
-						5:
-							Escribir "Su elección es: Tequeños"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer r
-							total <- total + 300 * r
-							v<-v+r
+							n1<-ConvertirANumero(n)
+							Si n1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * n1
+								v<-v+n1
+							FinSi
+						'3':
+							Repetir
+								Escribir "Su elección es: Tostados Arabe"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer p
+								validarnum<-validar(p)
+							Hasta Que validarnum=Verdadero
 							
-						6: 
-							Escribir "Su elección es: Baguel"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer s
-							total <- total + 500 * s
-							v<-v+s
+							p1<-ConvertirANumero(p)
+							Si p1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * p1
+								v<-v+p1
+							FinSi
+
+						'4': 
+							Repetir
+								Escribir "Su elección es: Medialunas"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer q
+								validarnum<-validar(q)
+							Hasta Que validarnum=Verdadero
 							
-						7: 
-							Escribir "Su elección es: Croque Monsieur"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer t
-							total <- total + 1500 * t
-							v<-v+t
-						8:
-							Escribir "Su elección es: Croque Madame"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer u
-							total <- total + 1500 * u
-							v<-v+u
+							q1<-ConvertirANumero(q)
+							Si q1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * q1
+								v<-v+q1
+							FinSi
+	
+						'5':
+							Repetir
+								Escribir "Su elección es: Tequeños"
+								Escribir "Ingrese cantidad (maximo de 10):  " Sin Saltar
+								leer r
+								validarnum<-validar(r)
+							Hasta Que validarnum=Verdadero
 							
+							r1<-ConvertirANumero(r)
+							Si r1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * r1
+								v<-v+r1
+							FinSi
+	
+						'6': 
+							Repetir
+								Escribir "Su elección es: Baguel"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer s
+								validarnum<-validar(s)
+							Hasta Que validarnum=Verdadero
+							
+							s1<-ConvertirANumero(s)
+							Si s1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * s1
+								v<-v+s1
+							FinSi
+							
+						'7': 
+							Repetir
+								Escribir "Su elección es: Croque Monsieur"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer t
+								validarnum<-validar(t)
+							Hasta Que validarnum=Verdadero
+							
+							t1<-ConvertirANumero(t)
+							Si t1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * t1
+								v<-v+t1
+							FinSi
+
+						'8':
+							Repetir
+								Escribir "Su elección es: Croque Madame"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer u
+								validarnum<-validar(u)
+							Hasta Que validarnum=Verdadero
+							
+							u1<-ConvertirANumero(u)
+							Si u1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * u1
+								v<-v+u1
+							FinSi
+		
 						De Otro Modo:
 							Escribir "La opción no es válida"
 					FinSegun
 				
-				3:
-					Escribir "************"
-					Escribir "***COMBOS***"
-					Escribir "************"
-					Escribir ""
-					Escribir "1_Croque Monsieur y tazon café c/leche-----------$2000"
-					Escribir "2_Croque madame y tazón café c/leche-------------$2000"
-					Escribir "3- Cafe c/leche y 2 medialunas-------------------$1000"
-					Escribir " "
-					Escribir "Elegir una opción :   " Sin Saltar
-				
-					leer opc4
+				'3':
+					Repetir
+						Escribir "************"
+						Escribir "***COMBOS***"
+						Escribir "************"
+						Escribir ""
+						Escribir "1_Croque Monsieur y tazon café c/leche-----------$2000"
+						Escribir "2_Croque madame y tazón café c/leche-------------$2000"
+						Escribir "3- Cafe c/leche y 2 medialunas-------------------$1000"
+						Escribir " "
+						Escribir "Elegir una opción :   " Sin Saltar
+						
+						leer opc4
+						validarnum<-validar(opc4)
+					Hasta Que validarnum=Verdadero
+					
 				
 					Segun opc4 Hacer
-						1: 
-							Escribir "Su elección es: Croque Monsieur y Tazón café c/leche"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer aa
-							total <- total + 2000 * aa
-							v<-v+aa
-						2:
-							Escribir "Su elección es: Croque Madame y Tazón café c/leche"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer bb
-							total <- total + 2000 * bb
-							v<-v+bb
-						3:
-							Escribir "Su elección es: Café c/leche y 2 medialunas"
-							Escribir "Ingrese cantidad: " Sin Saltar
-							leer cc
-							total <- total + 1000 * cc
-							v<-v+cc
+						'1':
+							Repetir
+								Escribir "Su elección es: Croque Monsieur y Tazón café c/leche"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer aa
+								validarnum<-validar(aa)
+							Hasta Que validarnum=Verdadero
+							
+							aa1<-ConvertirANumero(aa)
+							Si aa1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * aa1
+								v<-v+aa1
+							FinSi
+
+						'2':
+							Repetir
+								Escribir "Su elección es: Croque Madame y Tazón café c/leche"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer bb
+								validarnum<-validar(bb)
+							Hasta Que validarnum=Verdadero
+							
+							bb1<-ConvertirANumero(bb)
+							Si bb1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * bb1
+								v<-v+bb1
+							FinSi
+
+						'3':
+							Repetir
+								Escribir "Su elección es: Café c/leche y 2 medialunas"
+								Escribir "Ingrese cantidad (maximo de 10): " Sin Saltar
+								leer cc
+								validarnum<-validar(cc)
+							Hasta Que validarnum=Verdadero
+							
+							cc1<-ConvertirANumero(cc)
+							Si cc1>10 Entonces
+								Escribir"Se paso del maximo"
+							SiNo
+								total <- total + 800 * cc1
+								v<-v+cc1
+							FinSi
+							
 						De Otro Modo:
 							Escribir"Opcion invalida"
 					FinSegun
@@ -520,7 +704,7 @@ Funcion Bar
 					Escribir "El total a pagar es: $  ", total
 					
 					
-				Hasta Que opc1=4
+				Hasta Que opc1='4'
 				Escribir "Cantidad de productos:  ", v
 				Escribir "Total a pagar: $  ", total
 				Escribir " "
@@ -574,7 +758,7 @@ Funcion Bar
 				Escribir "__¶¶111111111¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶111111111¶__"
 				Escribir ""
 				
-		2: 
+		'2': 
 			Escribir"¡Gracias por pasar por nuestro buffet!"
 			Escribir"¡Vuelva pronto!"
 		De otro modo:
@@ -637,8 +821,10 @@ FinFuncion
 
 Algoritmo proyectoLab
 	
-	Definir eleccion, horarioAReservar, horarioBaja,diaAReservar,diaBaja,cont Como Entero
-	
+	Definir horarioAReservar, horarioBaja,diaAReservar,diaBaja,cont Como Entero
+	Definir validarnum Como Logico
+	Definir eleccion Como Caracter
+
 	bienvenida
 	cont<-registrar()
 	Si cont = 4 Entonces
@@ -648,11 +834,14 @@ Algoritmo proyectoLab
 		
 		cargarMatriz(matriz)
 		
-		eleccion<-menu()
-		Mientras eleccion<>0 Hacer
+		Repetir
+			eleccion<-menu()
+			validarnum<-validar(eleccion)
+		Hasta Que validarnum=Verdadero
+		Mientras eleccion<>'0' Hacer
 			Limpiar Pantalla
 			Segun eleccion Hacer
-				1: 
+				'1': 
 					Escribir "Ingrese el dia que quiere reservar (1) Lunes (2) Martes (3) Miercoles"
 					Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
 					leer diaAReservar
@@ -668,7 +857,7 @@ Algoritmo proyectoLab
 						Fin Si
 					Fin Si
 					
-				2:
+				'2':
 					Escribir "Ingrese el dia que quiere dar de baja(1) Lunes (2) Martes (3) Miercoles "
 					Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
 					leer diaBaja
@@ -685,15 +874,15 @@ Algoritmo proyectoLab
 					Fin Si
 					
 					
-				3:
+				'3':
 					mostrarMetodosDePago
-				4: 
+				'4': 
 					mostrarDescuentos
-				5:
+				'5':
 					mostrarDisponibilidad(matriz)
-				6: 
+				'6': 
 					Bar
-				7:
+				'7':
 					MostrarLayout
 				De Otro Modo:
 					Escribir"Opcion mal ingresada"
@@ -704,3 +893,21 @@ Algoritmo proyectoLab
 	FinSi
 	
 FinAlgoritmo
+
+Funcion validarnum<-validar(num)
+	Definir validarnum como Logico
+	
+	largo<-Longitud(num)
+	validarnum<-Verdadero
+	Para i<-1 Hasta largo Con Paso 1 Hacer
+		numunico<-Subcadena(num,i,i)
+		Si numunico<>'0' Y numunico<>'1' Y numunico<>'2' Y  numunico<>'3' Y  numunico<>'4' Y  numunico<>'5' Y  numunico<>'6' Y  numunico<>'7' Y  numunico<>'8' Y  numunico<>'9'  Entonces
+			validarnum<-Falso
+		Fin Si
+	Fin Para
+	Limpiar Pantalla
+	Si validarnum=Falso Entonces
+		Escribir "Por favor ingrese una opcion valida"
+	Fin Si
+FinFuncion
+	
