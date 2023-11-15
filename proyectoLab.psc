@@ -821,9 +821,9 @@ FinFuncion
 
 Algoritmo proyectoLab
 	
-	Definir horarioAReservar, horarioBaja,diaAReservar,diaBaja,cont Como Entero
+	Definir horarioBajaEnt,diaBajaEnt,diaAReservarEnt,horarioAReservarEnt,cont Como Entero
 	Definir validarnum Como Logico
-	Definir eleccion Como Caracter
+	Definir eleccion,diaAReservar,horarioAReservar,diaBaja,horarioBaja Como Caracter
 
 	bienvenida
 	cont<-registrar()
@@ -842,34 +842,50 @@ Algoritmo proyectoLab
 			Limpiar Pantalla
 			Segun eleccion Hacer
 				'1': 
-					Escribir "Ingrese el dia que quiere reservar (1) Lunes (2) Martes (3) Miercoles"
-					Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
-					leer diaAReservar
-					Si diaAReservar <1 o diaAReservar>7 Entonces
+					Repetir
+						Escribir "Ingrese el dia que quiere reservar (1) Lunes (2) Martes (3) Miercoles"
+						Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
+						leer diaAReservar
+						validarnum<-validar(diaAReservar)
+					Hasta Que validarnum = Verdadero
+					diaAReservarEnt<-ConvertirANumero(diaAReservar)
+					Si diaAReservarEnt <1 o diaAReservarEnt>7 Entonces
 						Escribir "Ingreso el dia incorrectamente"
 					SiNo
-						Escribir "Ingrese el horario que quiere reservar (de 12 a 23)"
-						leer horarioAReservar
-						Si horarioAReservar<12 o horarioAReservar>23 Entonces
+						Repetir
+							Escribir "Ingrese el horario que quiere reservar (de 12 a 23)"
+							leer horarioAReservar
+							validarnum<-validar(horarioAReservar)
+						Hasta Que validarnum = Verdadero
+						horarioAReservarEnt<-ConvertirANumero(horarioAReservar)
+						Si horarioAReservarEnt<12 o horarioAReservarEnt>23 Entonces
 							Escribir"Error al ingresar el horario"
 						SiNo
-							alta(matriz, horarioAReservar, diaAReservar)
+							alta(matriz, horarioAReservarEnt, diaAReservarEnt)
 						Fin Si
 					Fin Si
 					
 				'2':
-					Escribir "Ingrese el dia que quiere dar de baja(1) Lunes (2) Martes (3) Miercoles "
-					Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
-					leer diaBaja
-					Si diaBaja<1 o diaBaja>7 Entonces
+					Repetir
+						Escribir "Ingrese el dia que quiere dar de baja (1) Lunes (2) Martes (3) Miercoles "
+						Escribir "(4) jueves (5) Viernes (6) Sabado (7) Domingo"
+						leer diaBaja
+						validarnum<-validar(diaBaja)
+					Hasta Que validarnum = Verdadero
+					diaBajaEnt<-ConvertirANumero(diaBaja)
+					Si diaBajaEnt<1 o diaBajaEnt>7 Entonces
 						Escribir"Error al ingresar el dia"
 					SiNo
-						Escribir"Ingrese el horario que previamente reservó (de 12 a 23)"
-						leer horarioBaja
-						Si horarioBaja<12 o horarioBaja>23 Entonces
+						Repetir
+							Escribir"Ingrese el horario que previamente reservó (de 12 a 23)"
+							leer horarioBaja
+							validarnum<-validar(horarioBaja)
+						Hasta Que validarnum = Verdadero
+						horarioBajaEnt<-ConvertirANumero(horarioBaja)
+						Si horarioBajaEnt<12 o horarioBajaEnt>23 Entonces
 							Escribir"Error al ingresar el horario"
 						SiNo
-							baja(matriz, horarioBaja, diaBaja)
+							baja(matriz, horarioBajaEnt, diaBajaEnt)
 						Fin Si
 					Fin Si
 					
